@@ -12256,3 +12256,114 @@ pre .code {
     margin: 0 1rem;
   }
 }
+
+.flip-card {
+  background-color: transparent;
+  height: 280px;
+  perspective: 1000px;
+  width: 280px;
+}
+@media (min-width: 765px) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+@media (max-width: 764.9px) {
+  .flip-card {
+    cursor: pointer;
+    height: 280px;
+    width: 280px;
+  }
+  .flip-card .flip-card-click {
+    transform: rotateY(180deg);
+  }
+}
+.fc-title{
+  color: #fff;
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  font-size: xx-large;
+  font-weight: 600;
+  text-shadow: 0 0 5px #fff;
+  z-index: 2;
+}
+.flip-card .flip-card-inner {
+  height: 100%;
+  position: relative;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+.flip-card .flip-card-inner .flip-card-front,
+.flip-card .flip-card-inner .flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+.flip-card .flip-card-inner .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card .flip-card-inner .flip-card-front img {
+  height: 100%;
+  object-fit: cover;
+  filter:  grayscale(0) saturate(105%) brightness(90%) contrast(100%) ;
+  width: 100%;
+}
+@media (max-width: 764.9px) {
+  .flip-card .flip-card-inner .flip-card-front img {
+    height: 280px;
+    width: 280px;
+  }
+}
+.flip-card .flip-card-inner .flip-card-back {
+  background-color: #333;
+  border: solid 1px #555;
+  color: white;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+.flip-card .flip-card-inner .flip-card-back p{
+  color: #fff;
+  text-align: center;
+}
+.flip-card .flip-card-inner .flip-card-back h1 {
+  margin-top: 0;
+}
+@media (max-width: 480px) {
+  .flip-card {
+    height: 220px;
+    width: 220px;
+  }
+}
+.expertises-item .course-title{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.expertises-item .course-body{
+  color: #000;
+}
+.expertises-item .course-body span{
+  font-weight: normal;
+}
+.expertises-item .course-title:hover {
+  background: var(--primary);
+  font-weight: 800;
+  color: #fff !important;
+  transition: 0.5s 0s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.expertises-item .course-title:hover p{
+  font-weight: 600;
+  color: #fff;
+}
