@@ -12247,6 +12247,13 @@ pre .code {
   }
 }
 @media (max-width: 768px) {
+  .infos{
+    margin-top: 0;
+  }
+  .section.bg-overlay{
+    height: 18rem
+    ;
+  }
   .card-parent {
     margin: 0 1rem;
   }
@@ -12321,6 +12328,9 @@ pre .code {
   .flip-card .flip-card-inner .flip-card-front img {
     height: 280px;
     width: 280px;
+  }
+  .flip-card .flip-card-inner .flip-card-front .fc-title{
+    font-size: x-large;
   }
 }
 .flip-card .flip-card-inner .flip-card-back {
